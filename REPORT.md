@@ -1,19 +1,18 @@
-# Identificação
+﻿# Identificação
 
-* Página do repositório do trabalho ([link GitHub](TODO)) 
+* Página do repositório do trabalho ([link GitHub](https://github.com/marcio-henrique/cpu-memory-intense-usage)) 
 
 * Discente 1
-	* Nome: TODO
-	* Matrícula: TODO 
-	* Distribuição da nota (%): TODO
+	* Nome: Márcio Henrique Vieira de Oliveira
+	* Matrícula: 19111163 
 * Discente 2
-	* Nome: TODO
-	* Matrícula: TODO
-	* Distribuição da nota (%): TODO
+	* Nome: Michael Miller Rodrigues Cardoso
+	* Matrícula: 19111327
 * Discente 3
-	* Nome: TODO
-	* Matrícula: TODO
-	* Distribuição da nota (%): TODO		
+	* Nome: Michel Thomas Gomes Lins
+	* Matrícula: 19111328		
+
+* A distribuição da nota será feita de forma igualitária.
 	
 # Resultados
 
