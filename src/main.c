@@ -29,7 +29,7 @@ void father(int pid)
 	system(kill);
 }
 
-void child (int arg)
+void child (char arg[])
 {
 	if (strcmp(arg, "ucp") == 0) 	//intense UCP utilization
 	{
