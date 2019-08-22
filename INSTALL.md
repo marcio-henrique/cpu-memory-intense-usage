@@ -10,10 +10,10 @@
     Para a execução do mesmo, digite esses comandos:
     <p>
         <ul>
-          <li>Para o consumo da CPU: </li>
-            ./main cpu
+          <li>Para o consumo intenso da UCP</li>
+            ./main ucp
           </br>
-          <li> Para o consumo da CPU-MEM : </li>
-            ./main cpu-mem
+          <li> Para o consumo intenso da UCP e memória principal</li>
+            ./main ucp-mem
         </ul>
     </p>
