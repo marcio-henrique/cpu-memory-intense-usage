@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+//cat /proc/meminfo | sed -n 2p | awk '{print $2}'
 int main (int argc, char *argv[], char *envp[]) {
 
 	int pid ; /* identificador de processo */
@@ -49,9 +50,13 @@ int main (int argc, char *argv[], char *envp[]) {
 		}
 		else if (strcmp(argv[1], "cpu-mem") == 0) //TODO se argv[1] for igual a 'cpu-mem', executar código com utilização intensa da UCP e da memória
 		{
+			char *memory = (char *) malloc(sizeof(char));
 			while(1)
 			{
-				malloc(0.5);
+				if (memory != NULL)
+				{
+					memory = (char *) malloc(sizeof(char));
+				}
 			}
 		}	
 
