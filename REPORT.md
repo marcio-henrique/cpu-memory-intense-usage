@@ -1,4 +1,4 @@
-# Identificação
+﻿# Identificação
 
 * Página do repositório do trabalho ([link GitHub](https://github.com/marcio-henrique/cpu-memory-intense-usage)) 
 
@@ -16,12 +16,58 @@
 	
 # Resultados
 
-* TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
-	*  **UCP**: consumo da UCP em porcentagem.
-	*  **UCP-MEM**: consumo da memória principal em Kilobytes.
-* TODO: Cada métrica deve ser plotada em duas curvas separadas.
-* TODO: o eixo das abscissas deve representar o tempo medido a cada segundo e o eixo das coordenadas deve representar a métrica medida.
+## Utilização intensa da UCP
 
+* Em ambos os testes utilizamos o seguinte comando para utilização intensa da UCP:
+
+```
+while(1){}
+```
+
+* Resultado da primeira execução do algoritmo:
+
+![Teste 1 - Uso UCP](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-T1.jpg)
+
+* Resultado das seguintes execuções:
+
+![Teste 2 - Uso UCP](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-T2.jpg)
+
+## Utilização intensa da UCP e Memória
+
+* Primeiro teste UCP-MEM, sem grande restrição do uso de memória, utilizando os seguintes comandos:
+
+```
+char *memory = (char *) malloc(sizeof(char));
+		int i;
+		while(1)
+		{
+			if (memory != NULL)
+			{
+				memory = (char *) malloc(sizeof(char));
+			}
+		}
+	}
+```
+
+![Teste 1 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T11.jpg)
+![Teste 1 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T12.jpg)
+
+* Segundo teste UCP-MEM, com maior restrição ao uso de memória, utilizando os seguintes comandos:
+
+```
+char *memory = (char *) malloc(sizeof(char));
+		int i;
+		for(i = 0; 1; i++)
+		{
+			if (i % 10 == 0 && memory != NULL)
+			{
+				memory = (char *) malloc(sizeof(char));
+			}
+		}
+```
+
+![Teste 2 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T21.jpg)
+![Teste 2 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T22.jpg)
 
 # Discussão
 
