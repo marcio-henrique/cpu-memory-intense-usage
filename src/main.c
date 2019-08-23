@@ -38,9 +38,10 @@ void child (char arg[])
 	else if (strcmp(arg, "ucp-mem") == 0) 		//intense UCP and principal memory utilization
 	{
 		char *memory = (char *) malloc(sizeof(char));	//memory allocation to char (1 byte)
-		while(1)
+		int i;
+		for(i = 0; 1; i++)
 		{
-			if (memory != NULL)		//if memory allocation is available
+			if (i % 10 == 0 && memory != NULL)		//restrict memory allocation on loop and check if memory allocation is available
 			{
 				memory = (char *) malloc(sizeof(char));
 			}
