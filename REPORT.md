@@ -38,15 +38,13 @@ while(1){}
 
 ```
 char *memory = (char *) malloc(sizeof(char));
-		int i;
-		while(1)
-		{
-			if (memory != NULL)
-			{
-				memory = (char *) malloc(sizeof(char));
-			}
-		}
+while(1)
+{
+	if (memory != NULL)
+	{
+		memory = (char *) malloc(sizeof(char));
 	}
+}
 ```
 
 ![Teste 1 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T11.jpg)
@@ -56,14 +54,14 @@ char *memory = (char *) malloc(sizeof(char));
 
 ```
 char *memory = (char *) malloc(sizeof(char));
-		int i;
-		for(i = 0; 1; i++)
-		{
-			if (i % 10 == 0 && memory != NULL)
-			{
-				memory = (char *) malloc(sizeof(char));
-			}
-		}
+int i;
+for(i = 0; 1; i++)
+{
+	if (i % 10 == 0 && memory != NULL)
+	{
+		memory = (char *) malloc(sizeof(char));
+	}
+}
 ```
 
 ![Teste 2 - Uso UCP-MEM](https://github.com/marcio-henrique/cpu-memory-intense-usage/blob/master/img/CPU-MEM-T21.jpg)
