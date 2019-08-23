@@ -9,9 +9,9 @@ void father(int pid)
 {
 	char get_cpu[256], get_memory[256], kill[128];
 
-	sprintf(get_memory, "%s%d%s", "pmap ", pid, " | tail -n 1 | awk '{print $2}'");		//string command to show a memory usage in Kb from a process on linux terminal
-	sprintf(get_cpu, "%s%d%s", "ps -p ", pid, " -o %cpu | grep -v CPU ");				//string command to show a UCP usage in % from a process on linux terminal
-	sprintf(kill, "%s%d","kill ",pid);													//string command to kill process on linux
+	sprintf(get_memory, "%s%d%s", "pmap ", pid, " | tail -n 1 | awk '{print $2}'");		//command to show the memory usage in Kb from a process on linux terminal
+	sprintf(get_cpu, "%s%d%s", "ps -p ", pid, " -o %cpu | grep -v CPU ");			//command to show the UCP usage in % from a process on linux terminal
+	sprintf(kill, "%s%d","kill ",pid);							//string command to kill process on linux
 
 	int i;
 	for (i = 0; i < 10; i++)
@@ -60,11 +60,11 @@ int main (int argc, char *argv[], char *envp[]) {
 		perror ("Error: ") ;		//error status print
 		exit (-1) ; 			// finish the process with a -1 error code
 	}
-	else if( pid > 0 ) 		// else, if i am a father process
+	else if( pid > 0 ) 		// else, if i am father process
 	{
 		father(pid);
 	}
-	else 	// else, if i am a child process (pid == 0)
+	else 	// else, if i am child process (pid == 0)
 	{
 		child(argv[1]);
 	}
