@@ -1,4 +1,4 @@
-﻿# Identificação
+# Identificação
 
 * Página do repositório do trabalho ([link GitHub](https://github.com/marcio-henrique/cpu-memory-intense-usage)) 
 
